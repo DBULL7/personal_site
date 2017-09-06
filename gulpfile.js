@@ -7,6 +7,7 @@ var babelify = require('babelify');
 var source = require('vinyl-source-stream');
 var buffer = require('vinyl-buffer');
 var htmlmin = require('gulp-htmlmin');
+let cleanCSS = require('gulp-clean-css');
 
 let folders = []
 
@@ -60,5 +61,13 @@ gulp.task('minify-html', () => {
   })
 })
 
+gulp.task('minify-css', () => {
+  folders.forEach(folder => {
+    gulp.src(`./src/${folder}/main.css`)
+      .pipe(cleanCSS({ compatibility: 'ie8' }))
+      .pipe(gulp.dest(`public/${folder}/`));
+  })
+})
 
-gulp.task('default', ['scripts', 'minify-html'])
+
+gulp.task('default', ['scripts', 'minify-html', 'minify-css'])
