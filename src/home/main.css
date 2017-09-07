@@ -5,9 +5,9 @@ html {
 body {
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
 	font-weight: 300;
-	background-image: url('../assets/northern-lights.jpg');
+	/* background-image: url('../assets/northern-lights.webp');
 	background-size: 100% 100%;
-	background-repeat: no-repeat;
+	background-repeat: no-repeat; */
 	margin: 0;
 	justify-content: space-between;
 	height: 100%;
