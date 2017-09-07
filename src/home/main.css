@@ -10,6 +10,23 @@ body {
 	height: 100%;
 }
 
+.nav-bar {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.nav {
+	list-style: none;
+	display: flex;
+	justify-content: space-around;
+  width: 40%;
+}
+
+.nav-link {
+	color: #fff;
+	border: 1px solid #fff;
+}
+
 h1 {
 	font-family: "Chronicle Display Bold",Georgia,serif;
 	margin-top: 250px;
@@ -26,14 +43,13 @@ h3 {
 	font-weight: 500;
 }
 
-#ibuild {
-	left: 30%;
-	position: absolute;
+#example {
+	display: block;
 }
 
 @media (max-width: 450px) {
 	h1 {
-		margin-top: 100px;
+		margin-top: 70px;
 	}
 	#ibuild {
 		left: 0;

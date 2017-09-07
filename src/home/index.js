@@ -46,7 +46,6 @@ let flicker = () => {
   setTimeout(() => {
     job.style.paddingRight = '0'
     job.style.color = '#fff'
-    test()
   }, 90);
   setTimeout(function () { flicker(); }, 5000);
 }
