@@ -69,5 +69,13 @@ gulp.task('minify-css', () => {
   })
 })
 
+gulp.task('watch', function () {
+  folders.forEach(folder => {
+    gulp.watch(`./src/${folder}/main.css`, ['minify-css'])
+    gulp.watch(`./src/${folder}/index.html`, ['minify-html'])
+    gulp.watch(`./src/${folder}/index.js`, ['scripts'])
+  })
+});
 
-gulp.task('default', ['scripts', 'minify-html', 'minify-css'])
+
+gulp.task('default', ['scripts', 'minify-html', 'minify-css', 'watch'])

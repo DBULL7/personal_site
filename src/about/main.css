@@ -1,0 +1,66 @@
+html {
+	height: 100%;
+}
+
+body {
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-weight: 300;
+	/* overflow: hidden; */
+	background-image: url('../assets/zen.jpg');
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	margin: 0;
+	display: flex;
+	justify-content: space-between;
+	height: 100%;
+}
+
+textarea {
+	resize: none;
+}
+
+#terminal {
+	height: 100%;
+	width: 500px;
+	background-color: #000;
+	color: #99ddff;
+	font-size: 24px;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	
+	padding-left: 45px;
+	border: none;
+}
+
+#content {
+	text-align: center;
+}
+
+.buttons {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+a {
+	text-decoration: none;
+}
+
+.links {
+	margin-top:20px;
+	width: 250px;
+	font-size: 18px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: #fff;
+	color: #5012E6;
+	border: 1px solid #5012E6;
+}
+
+.links:hover {
+	background: #5012E6;
+	color: #fff;
+}
+
+h1 {
+	color: #5012E6;
+}
