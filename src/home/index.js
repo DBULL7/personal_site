@@ -49,4 +49,6 @@ let flicker = () => {
   }, 90);
   setTimeout(function () { flicker(); }, 5000);
 }
-flicker()
+setTimeout(function() {
+  flicker()
+}, 3500);
