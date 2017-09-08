@@ -40,13 +40,28 @@ type(text, subheader)
 
 var canvas = document.getElementById('game');
 var context = canvas.getContext('2d');
-var x = 50;
-var y = 50;
-context.fillStyle = "rgba(0, 255, 0, 1)"
-context.fillRect(x, y, 10, 10);
-
+let Star = require('./star')
+let allStars = []
+let starColors = ['#ff851b', '#ffdc00', '#00BFFF', '#ff4136', '#f012be', '#2ecc40']
+let generate = () => {
+  allStars = []
+  for (let i = 0; i <= 300; i++) {
+    let name = `star${i}`
+    let rand = Math.floor(Math.random() * (canvas.width) + 1);
+    let randColor = Math.floor(Math.random() * (starColors.length) + 0);
+    name = new Star(rand, i*5, 5, 5, starColors[randColor])
+    allStars.push(name)
+  }
+  setTimeout(function() {
+    generate()
+  }, 5000);
+}
+generate()
 let gameLoop = () => {
-  context.fillRect(x++, y, 10, 10);
+  context.clearRect(0, 0, canvas.width, canvas.height);
+  allStars.forEach(star => {
+    star.draw(context, canvas)
+  })
   requestAnimationFrame(gameLoop);
 }
 
