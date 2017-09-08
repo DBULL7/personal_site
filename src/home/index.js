@@ -38,17 +38,3 @@ let type = (string, element) => {
 let text = 'Javascript Applications'
 type(text, subheader)
 
-
-let flicker = () => {
-  let job = document.getElementById('job')
-  job.style.paddingRight = '50px'
-  job.style.color = 'red'
-  setTimeout(() => {
-    job.style.paddingRight = '0'
-    job.style.color = '#fff'
-  }, 90);
-  setTimeout(function () { flicker(); }, 5000);
-}
-setTimeout(function() {
-  flicker()
-}, 3500);

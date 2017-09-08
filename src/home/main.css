@@ -9,11 +9,15 @@ body {
 	justify-content: space-between;
 	height: 100%;
 }
+.bg {
+	background-color: #2BDE73;
+	height: 100%;
+}
 
 .nav-bar {
 	display: flex;
 	justify-content: flex-end;
-	position: absolute;
+	/* position: absolute; */
 	bottom: -57px;
 	width: 100%;
 	background: #4776E6;  
@@ -46,12 +50,9 @@ body {
 
 .material-icons.md-48 { 
 	width: 100%;
-	position: absolute;
+	position: relative;
 	text-align: center;
 	font-size: 60px; 
-}
-
-.md-arrow {
 	margin-top: 50px;
 	color: #fff;
 }
@@ -60,13 +61,10 @@ h1 {
 	font-family: "Chronicle Display Bold",Georgia,serif;
 	padding-top: 150px;
 	text-align: center;
+	margin-top: 0;
 	color: #fff;
 	font-size: 70px;
 	font-weight: 500;
-}
-
-#test {
-	margin-bottom: 100px;
 }
 
 #job {
@@ -91,6 +89,19 @@ h1 {
 	width: 100%;
 }
 
+/* #social {
+	position: absolute;
+	top: 110;
+} */
+
+#icons {
+
+}
+
+.sm-icon {
+	text-decoration: none;
+}
+
 
 @media (min-width: 1000px) {
 	.nav {
@@ -100,7 +111,6 @@ h1 {
 
 @media (max-width: 450px) {
 	.nav-bar {
-		position: absolute;
 		font-size: 16px;
 		justify-content: space-around;
 	}
