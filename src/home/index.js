@@ -38,3 +38,16 @@ let type = (string, element) => {
 let text = 'Javascript Applications'
 type(text, subheader)
 
+var canvas = document.getElementById('game');
+var context = canvas.getContext('2d');
+var x = 50;
+var y = 50;
+context.fillStyle = "rgba(0, 255, 0, 1)"
+context.fillRect(x, y, 10, 10);
+
+let gameLoop = () => {
+  context.fillRect(x++, y, 10, 10);
+  requestAnimationFrame(gameLoop);
+}
+
+requestAnimationFrame(gameLoop);

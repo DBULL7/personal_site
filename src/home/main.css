@@ -102,6 +102,17 @@ h1 {
 	text-decoration: none;
 }
 
+#down-icon {
+	text-decoration: none;
+	color: #fff;
+}
+
+#game {
+  border: 1px dashed;
+  margin: auto;
+  display: block;
+}
+
 
 @media (min-width: 1000px) {
 	.nav {
