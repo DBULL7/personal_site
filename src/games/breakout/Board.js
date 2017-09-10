@@ -18,7 +18,7 @@ class Board {
 
     this.blockDestroySound = new Audio("breakout/Explosion6.wav")
     this.paddleHitSound    = new Audio("breakout/sfx_sounds_impact13.wav")
-    this.gameplaySound     = new Audio("breakout/Visager_-_04_-_Factory_Time.mp3")
+    this.gameplaySound     = new Audio("breakout/theme_song.mp3")
   }
 
 

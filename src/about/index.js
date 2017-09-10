@@ -1,9 +1,13 @@
 let terminal = document.getElementById('terminal')
 
 let type = (string, element) => {
+  element.value = ''
   const writer = (i) => {
     if (string.length <= i++) {
       element.value = string;
+      setTimeout(function() {
+        type(text, terminal)
+      }, 9000);
       return;
     }
     element.value = string.substring(0, i);
@@ -12,13 +16,5 @@ let type = (string, element) => {
   }
   writer(0)
 }
-let text = '\nPrimary Language: Javascript\n\n\nClient Side:\t\t\tBuild Tools:\n\nReact / Redux\t\t\tWebpack\nReact Native\t\t\tGulp\njQuery\t\t\t\tBabel\nCSS\t\t\t\t\tBrowserify\nSass\nReact Router\nHtml 5 Canvas\n\n\nBackend:\t\t\t\tTesting Tools:\n\nNode.js\t\t\t\tEnzyme\nExpress\t\t\t\tMocha / Chai\nPostgres\t\t\t\tSelenium\nMongoDB\t\t\tJest\nJSON Web-tokens\t\tFetch-Mock\nSocket.io\t\t\t\tCircle CI'
+let text = '\n\u0020\u0020Primary Language: Javascript\n\n\n\u0020\u0020Client Side:\t\t\tBuild Tools:\n\n\u0020\u0020React / Redux\t\tWebpack\n\u0020\u0020React Native\t\t\tGulp\n\u0020\u0020jQuery\t\t\t\tBabel\n\u0020\u0020CSS\t\t\t\tBrowserify\n\u0020\u0020Sass\n\u0020\u0020React Router\n\u0020\u0020Html 5 Canvas\n\n\n\u0020\u0020Backend:\t\t\tTesting Tools:\n\n\u0020\u0020Node.js\t\t\t\tEnzyme\n\u0020\u0020Express\t\t\t\tMocha / Chai\n\u0020\u0020Postgres\t\t\tSelenium\n\u0020\u0020MongoDB\t\t\tJest\n\u0020\u0020JSON Web-tokens\t\tFetch-Mock\n\u0020\u0020Socket.io\t\t\tCircle CI'
 type(text, terminal)
-
-let githubClicked = `\n\n\nThanks for checking out my Github!\n\n\n********************************************\n\nIn case you missed them here are some of my favorite projects so far:\n\nhttps://movietracker-turing.herokuapp.com/\n\nhttps://voter-data.herokuapp.com/api/v1/voters\n\nhttps://dbull7.github.io/breakout/`
-let github = document.getElementById('github')
-github.addEventListener('click', () => {
-  terminal.value = ''
-  terminal.style.color = '#33FF39'
-  type(githubClicked, terminal)
-})
