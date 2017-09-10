@@ -10,11 +10,17 @@ var htmlmin = require('gulp-htmlmin');
 let cleanCSS = require('gulp-clean-css');
 
 let folders = []
-
+let gameFolders = []
 const fs = require('fs');
 
 fs.readdirSync('./src').forEach(file => {
-  folders.push(file)
+  // if (file !== 'games') {
+    folders.push(file)
+  // }
+})
+
+fs.readdirSync('./src/games').forEach(file => {
+  gameFolders.push(file)
 })
 
 
@@ -30,6 +36,17 @@ let compile = () => {
         .pipe(rename('bundle.js'))
         .pipe(gulp.dest(`public/${folder}/`))
     })
+    gameFolders.forEach(folder => {
+      if (folder === 'index.html' || 'main.css' || 'index.js') return
+        browserify({ entries: `./src/games/${folder}/index.js`, debug: false })
+          .transform("babelify", { presets: ["es2015"] })
+          .bundle()
+          .pipe(source('index.js'))
+          .pipe(buffer())
+          .pipe(uglify())
+          .pipe(rename('bundle.js'))
+          .pipe(gulp.dest(`public/games/${folder}/`))
+    })
   } else {
     folders.forEach(folder => {
       browserify({ entries: `./src/${folder}/index.js`, debug: true })
@@ -39,6 +56,16 @@ let compile = () => {
         .pipe(buffer())
         .pipe(rename('bundle.js'))
         .pipe(gulp.dest(`public/${folder}/`))
+    })
+    gameFolders.forEach(folder => {
+      if (folder === 'index.html' || 'main.css' || 'index.js') return
+      browserify({ entries: `./src/games/${folder}/index.js`, debug: false })
+        .transform("babelify", { presets: ["es2015"] })
+        .bundle()
+        .pipe(source('index.js'))
+        .pipe(buffer())
+        .pipe(rename('bundle.js'))
+        .pipe(gulp.dest(`public/games/${folder}/`))
     })
   }
 }
@@ -59,6 +86,11 @@ gulp.task('minify-html', () => {
       .pipe(htmlmin({ collapseWhitespace: true }))
       .pipe(gulp.dest(`public/${folder}/`))
   })
+  gameFolders.forEach(folder => {
+    gulp.src(`./src/games/${folder}/index.html`)
+      .pipe(htmlmin({ collapseWhitespace: true }))
+      .pipe(gulp.dest(`public/games/${folder}/`))
+  })
 })
 
 gulp.task('minify-css', () => {
@@ -66,6 +98,11 @@ gulp.task('minify-css', () => {
     gulp.src(`./src/${folder}/main.css`)
       .pipe(cleanCSS({ compatibility: 'ie8' }))
       .pipe(gulp.dest(`public/${folder}/`));
+  })
+  gameFolders.forEach(folder => {
+    gulp.src(`./src/games/${folder}/main.css`)
+      .pipe(cleanCSS({ compatibility: 'ie8' }))
+      .pipe(gulp.dest(`public/games/${folder}/`));
   })
 })
 

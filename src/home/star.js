@@ -17,8 +17,7 @@ class Star {
   };
 
   move(canvas) {
-    // let rand = Math.floor(Math.random() * (-5) + 0);
-    this.vx = -2
+    this.vx = -1
     if (this.x === 0) {
       this.x = canvas.width - 10
     } 
