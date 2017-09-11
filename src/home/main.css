@@ -130,6 +130,17 @@ h1 {
 	}
 }
 
+@media (max-width: 650px) {
+  .nav-bar {
+		justify-content: space-around;
+	}
+	.nav {
+		padding-left: 0;
+		margin-right: 0;
+		width: 100%;
+	}
+}
+
 @media (max-width: 450px) {
 	.nav-bar {
 		font-size: 16px;
@@ -145,7 +156,7 @@ h1 {
 	}
 
 	h1 {
-		padding-top: 70px;
+		padding-top: 30px;
 	}
 
 	#ibuild {
