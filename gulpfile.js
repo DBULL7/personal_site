@@ -95,12 +95,12 @@ gulp.task('minify-html', () => {
 
 gulp.task('minify-css', () => {
   folders.forEach(folder => {
-    gulp.src(`./src/${folder}/main.css`)
+    gulp.src(`./src/${folder}/*css`)
       .pipe(cleanCSS({ compatibility: 'ie8' }))
       .pipe(gulp.dest(`public/${folder}/`));
   })
   gameFolders.forEach(folder => {
-    gulp.src(`./src/games/${folder}/main.css`)
+    gulp.src(`./src/games/${folder}/*css`)
       .pipe(cleanCSS({ compatibility: 'ie8' }))
       .pipe(gulp.dest(`public/games/${folder}/`));
   })

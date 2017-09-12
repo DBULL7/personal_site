@@ -43,6 +43,11 @@ body {
 	color: #FFDC00;
 }
 
+h1 {
+	padding-top: 75px;
+	margin: 0;
+}
+
 #social {
 	display: flex;
   justify-content: center;
@@ -92,7 +97,7 @@ body {
 	transition: opacity 1500ms;
 }
 
-.hover-layer:hover {
+.hover-layer:hover, .hover-layer:active{
 	opacity: 1;
 }
 
