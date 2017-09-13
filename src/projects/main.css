@@ -68,6 +68,7 @@ h1 {
 .projects {
 	padding-top: 100px;
 	display: flex;
+	justify-content: center;
 	flex-wrap: wrap;
 }
 
@@ -114,6 +115,31 @@ h1 {
 	height: 35px;
 	width: 100px;
 	border-radius: 5px;
+}
+
+.popup-background {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	background-color: rgba(255, 255, 255, 0.75);
+}
+
+.popup {
+	position: absolute;
+	top: 40px;
+	left: 40px;
+	right: 40px;
+	bottom: 40px;
+	max-width: 900px;
+	margin: 0 auto;
+	border: 1px solid #cccccc;
+	background: rgba(255, 255, 255, 0.901961);
+	overflow: auto;
+	border-radius: 4px;
+	outline: none;
+	padding: 20px;
 }
 
 @media (max-width: 500px) {
