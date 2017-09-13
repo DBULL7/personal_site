@@ -1,11 +1,34 @@
-let screenAvailWidth;
-window.onload = () => {
-  screenAvailWidth = document.body.clientWidth
-}
-
-window.onresize = () => {
-  screenAvailWidth = document.body.clientWidth
-}
+window.addEventListener('touchstart', function onFirstTouch() {
+  var paras = document.getElementsByClassName('hover-layer');
+  while (paras.length) {
+    paras[0].remove()
+  }
+  document.getElementById('sc3-container').addEventListener('click', () => {
+    makeRequest('Static Comp 3')
+  })
+  document.getElementById('breakout-container').addEventListener('click', () => {
+    makeRequest('breakout')
+  })
+  document.getElementById('jetfuel-container').addEventListener('click', () => {
+    makeRequest('jetfuel')
+  })
+  document.getElementById('2DoBox-container').addEventListener('click', () => {
+    makeRequest('2DoBox')
+  })
+  document.getElementById('cs-container').addEventListener('click', () => {
+    makeRequest('code-sport')
+  })
+  document.getElementById('weathrly-container').addEventListener('click', () => {
+    makeRequest('weathrly')
+  })
+  document.getElementById('voter-data-container').addEventListener('click', () => {
+    makeRequest('voter-data')
+  })
+  document.getElementById('movie-tracker-container').addEventListener('click', () => {
+    makeRequest('movie-tracker')
+  })
+  window.removeEventListener('touchstart', onFirstTouch, false);
+}, false);
 
 
 let makeRequest = (name) => {
@@ -27,7 +50,7 @@ let popup = (project) => {
   let title = p.name 
   let description = p.description
   let technologies = p.technologies
-  let modal = `<div class='popup-background' id='test'>
+  let modal = `<div class='popup-background' id='pop'>
                 <div class='popup'>
                   <h1>${title}</h1>
                   <picture>
@@ -43,9 +66,9 @@ let popup = (project) => {
               </div>`
   document.body.insertAdjacentHTML('beforeend', modal)
   document.body.style.overflow = 'hidden'
-  let test = document.getElementById('test')
-  test.addEventListener('click', () => {
-    var elem = document.getElementById("test");
+  let pop = document.getElementById('pop')
+  pop.addEventListener('click', () => {
+    var elem = document.getElementById("pop");
     elem.remove()
     document.body.style.overflow = 'auto'
   })
