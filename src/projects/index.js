@@ -50,18 +50,22 @@ let popup = (project) => {
   let title = p.name 
   let description = p.description
   let technologies = p.technologies
+  let gh = p.github
+  let site = p.site
   let modal = `<div class='popup-background' id='pop'>
                 <div class='popup'>
-                  <h1>${title}</h1>
+                  <p class='popup-title'>${title}</p>
                   <picture>
                     <source srcset='${p.webp}' type='image/webp'>
                     <source srcset='${p.jpg}' type='image/jpeg'>
-                    <img src='${p.jpg}' alt="Movie Tracker Screenshot">
+                    <img id='large-img' src='${p.jpg}' alt="Movie Tracker Screenshot">
                   </picture>
                   <p>${description}</p>
-                  <ul>
-                  ${technologies.map(tech => `<li>${tech}</li>`).join('')}
-                  </ul
+                  <ul class='tech-list'>
+                  ${technologies.map(tech => `<li class='tech'>${tech}</li>`).join('')}
+                  </ul>
+                  <a href='${gh}' target="_blank" class='popup-links'>Github</a>
+                  <a href='${site}' target="_blank" class='popup-links'>Website</a>
                 </div>
               </div>`
   document.body.insertAdjacentHTML('beforeend', modal)

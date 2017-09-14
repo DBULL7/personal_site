@@ -44,7 +44,8 @@ body {
 }
 
 h1 {
-	padding-top: 75px;
+	padding-top: 85px;
+	padding-left: 20px;
 	margin: 0;
 }
 
@@ -66,20 +67,21 @@ h1 {
 }
 
 .projects {
-	padding-top: 100px;
+	padding-top: 30px;
 	display: flex;
-	justify-content: center;
+	/* justify-content: center; */
 	flex-wrap: wrap;
 }
 
 .project-container {
 	position: relative;
-	width: 400px;
+	max-width: 600px;
+
 }
 
 .project-img {
-	width: 400px;
-	height: 300px;
+	width: 100%;
+	height: 100%;
 }
 
 .project-title {
@@ -135,17 +137,55 @@ h1 {
 	max-width: 900px;
 	margin: 0 auto;
 	border: 1px solid #cccccc;
-	background: rgba(255, 255, 255, 0.901961);
+	background: #1b1b1b;
+	color: #00b7c7;
 	overflow: auto;
 	border-radius: 4px;
 	outline: none;
 	padding: 20px;
 }
 
+.tech-list {
+	list-style: none;
+}
+
+.tech {
+	
+}
+
+#large-img {
+	width: 100%;
+	height: 60%;
+}
+
+.popup-title {
+	text-align: center;
+	font-size: 24px;
+}
+
+.popup-links {
+	padding: 5px;
+	border: 1px solid #00b7c7;
+	color: #fff;
+	text-decoration: none;
+}
+
+@media screen and (min-width: 600px) {
+	.project-container {
+		width: 50%;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+  .project-container {
+		width: 33.33%;
+	}
+}
+
 @media (max-width: 500px) {
   .nav-bar {
     justify-content: space-around;
-  }
+	}
   
   .nav {
     width: 100%;
@@ -164,5 +204,11 @@ h1 {
   
   .project-img {
     width: 100%;
-  }
+	}
+	
+	.popup {
+		left: 8px;
+		right: 8px;
+		padding: 6px;
+	}
 }
