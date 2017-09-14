@@ -124,6 +124,15 @@ h1 {
 	margin-bottom: 50px;
 }
 
+#send {
+	border: 1px solid #dff937;
+	background-color: transparent;
+	padding: 10px 30px;
+	color: #dff937;
+	margin-top: 30px;
+	font-size: 18px;
+}
+
 @media (max-width: 500px) {
 	#form {
 		background: linear-gradient(rgba(0,0,0,0.60),rgba(0, 0, 0, 0.60)),url(../assets/contact.jpg);
