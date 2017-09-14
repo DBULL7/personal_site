@@ -11,6 +11,7 @@ body {
 
 #form {
 	height: 100%;
+	background: linear-gradient(rgba(0,0,0,0.60),rgba(0, 0, 0, 0.60)),url(../assets/contact.jpg);
 	background: linear-gradient(rgba(0,0,0,0.60),rgba(0, 0, 0, 0.60)),url(../assets/contact.webp);
 	background-position: center center;
 	background-size: cover;
@@ -21,30 +22,59 @@ body {
 }
 
 .input-wrapper {
-  width: 40%;
+	width: 40%;
+	position: relative;	
+	margin: 40px;
 }
 
 .input-desc {
 	color: #dff937;
+	position: absolute;
 	/* color: #FFF; */
+	top: -20px;
 	font-size: 22px;
 	font-weight: 600;
 }
 
 .input {
+	color: #fff;
+	font-size: 17px;
   border: none;
-  border-bottom: 3px solid #D3C8C8;  
+  border-bottom: 2px solid #D3C8C8;  
 	width: 100%;
+	padding-top: 20px;
 	background-color: rgba(0, 0, 0, 0);
 }
 
-.input:focus {
-  outline: none;
+.input:focus { 
+	outline: none;
 }
 
-#message:focus {
-  height: 400px;
+.input ~ .focus-border {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 0;
+	height: 2px;
+	background-color: #3399FF;
 }
+
+.input:focus ~ .focus-border {
+	width: 101%;
+	transition: 0.4s;
+}
+
+/* label {
+	font-size: 15px;
+	top: -19px;
+	color: #dff937;
+	transition: 0.5s;
+} */
+		
+
+/* #message:focus {
+  height: 400px;
+} */
 
 
 .nav-bar {
@@ -81,34 +111,18 @@ body {
 	color: #FFDC00;
 }
 
-#social {
-	display: flex;
-  justify-content: center;
-  padding-top: 100px;
-	/* margin-top: 50px;
-	margin-bottom: 50px; */
-}
-
-.sm-icon {
-	text-decoration: none;
-	font-size: 18px;
-	padding: 10px 20px;
-	background-color: #fff;
-	color: #5012E6;
-	border: 1px solid #5012E6;
-}
-
 h1 {
 	font-size: 45px;
 	color: red;
 	text-align: center;
 	margin: 0;
+	padding-top: 20px;
 }
 
 .greeting {
 	text-align: center;
 	color: #FFF;
-	font-weight: 600;
+	font-weight: 500;
 	font-size: 20px;
 	margin: 0;
 }
@@ -121,7 +135,7 @@ h1 {
 }
 
 #bottom-greeting {
-	margin-bottom: 50px;
+	margin-bottom: 20px;
 }
 
 #send {
@@ -134,9 +148,19 @@ h1 {
 }
 
 @media (max-width: 500px) {
+	body {
+		background: #005C97;  
+		background: -webkit-linear-gradient(to right, #363795, #005C97);  
+		background: linear-gradient(to right, #363795, #005C97); 
+	}
 	#form {
-		background: linear-gradient(rgba(0,0,0,0.60),rgba(0, 0, 0, 0.60)),url(../assets/contact.jpg);
-		background-position: 30% center;
+		height: auto;
+		background: #005C97;  
+		background: -webkit-linear-gradient(to right, #363795, #005C97);  
+		background: linear-gradient(to right, #363795, #005C97); 
+
+		/* background: linear-gradient(rgba(0,0,0,0.60),rgba(0, 0, 0, 0.60)),url(../assets/contact.jpg); */
+		/* background-position: 30% center; */
 	}
 	.nav-bar {
 		justify-content: space-around;
@@ -151,5 +175,25 @@ h1 {
 	}
 	.input-wrapper {
 		width: 80%;
+	}
+
+	h1 {
+		color: #fff;
+		font-size: 35px;
+		margin-top: 75px;
+	} 
+	.greeting {
+		font-size: 18px;
+		width: 80%;
+		
+	}
+	.input-desc {
+		color: #00b7c7;
+	}
+
+	#send {
+		border: 1px solid #00b7c7;
+		color: #00b7c7;
+		margin-bottom: 50px;
 	}
 }

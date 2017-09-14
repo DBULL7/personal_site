@@ -12,7 +12,14 @@ const msg = (req, res) => {
     subject: subjectReceived,
     text: message
   };
-  sgMail.send(msg);
+  try {
+    sgMail.send(msg);
+    
+  } catch(err) {
+    console.log(err)
+    res.status(500).json({message: 'Something went wrong.'})
+  }
+  res.send(200).json({message: 'Success!'})
 }
 
 
