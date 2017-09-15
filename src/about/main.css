@@ -103,6 +103,12 @@ a {
 	color: #fff;
 }
 
+#profile-pic {
+	border-radius: 50%;
+	max-width: 200px;
+	margin-top: 75px;
+}
+
 h1 {
 	color: #5012E6;
 }
@@ -144,5 +150,9 @@ h1 {
 		margin: 0;
 		margin-top: 16px;
 		margin-bottom: 16px;
+	}
+	#profile-pic {
+		margin-top: 25px;
+		height: 150px;
 	}
 }
