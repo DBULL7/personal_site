@@ -147,6 +147,16 @@ h1 {
 	font-size: 18px;
 }
 
+@media (min-width: 500px) {
+	#send:hover {
+		color: #fff;
+		transition: all .5s;
+		
+		background: #00b7c7;
+		border: 1px solid #00b7c7;
+	}
+}
+
 @media (max-width: 500px) {
 	body {
 		background: #005C97;  
