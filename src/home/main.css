@@ -223,4 +223,18 @@ h1 {
 	#example {
 		display: block;
 	}
+	#welcome {
+		padding: 20px;
+	}
+	#welcome-wrapper {
+		flex-direction: column;
+	}
+	#welcome-img-wrapper {
+		width: 100%;
+		margin-bottom: 40px;
+	}
+	#welcome-text-wrapper {
+		width: 100%;
+		text-align: center;
+	}
 }
