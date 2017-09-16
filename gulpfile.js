@@ -34,6 +34,7 @@ let compile = () => {
         .pipe(buffer())
         .pipe(uglify())
         .pipe(rename('bundle.js'))
+        .on('error', onError)
         .pipe(gulp.dest(`public/${folder}/`))
     })
     gameFolders.forEach(folder => {
@@ -45,6 +46,7 @@ let compile = () => {
           .pipe(buffer())
           .pipe(uglify())
           .pipe(rename('bundle.js'))
+          .on('error', onError)
           .pipe(gulp.dest(`public/games/${folder}/`))
     })
   } else {
@@ -55,6 +57,7 @@ let compile = () => {
         .pipe(source('index.js'))
         .pipe(buffer())
         .pipe(rename('bundle.js'))
+        .on('error', onError)
         .pipe(gulp.dest(`public/${folder}/`))
     })
     gameFolders.forEach(folder => {
@@ -65,6 +68,7 @@ let compile = () => {
         .pipe(source('index.js'))
         .pipe(buffer())
         .pipe(rename('bundle.js'))
+        .on('error', onError)
         .pipe(gulp.dest(`public/games/${folder}/`))
     })
   }
@@ -84,11 +88,13 @@ gulp.task('minify-html', () => {
   folders.forEach(folder => {
     gulp.src(`./src/${folder}/index.html`)
       .pipe(htmlmin({ collapseWhitespace: true }))
+      .on('error', onError)
       .pipe(gulp.dest(`public/${folder}/`))
   })
   gameFolders.forEach(folder => {
     gulp.src(`./src/games/${folder}/index.html`)
       .pipe(htmlmin({ collapseWhitespace: true }))
+      .on('error', onError)
       .pipe(gulp.dest(`public/games/${folder}/`))
   })
 })
@@ -97,11 +103,13 @@ gulp.task('minify-css', () => {
   folders.forEach(folder => {
     gulp.src(`./src/${folder}/*css`)
       .pipe(cleanCSS({ compatibility: 'ie8' }))
+      .on('error', onError)
       .pipe(gulp.dest(`public/${folder}/`));
   })
   gameFolders.forEach(folder => {
     gulp.src(`./src/games/${folder}/*css`)
       .pipe(cleanCSS({ compatibility: 'ie8' }))
+      .on('error', onError)
       .pipe(gulp.dest(`public/games/${folder}/`));
   })
 })
@@ -114,5 +122,9 @@ gulp.task('watch', function () {
   })
 });
 
+function onError(err) {
+  console.log(err);
+  this.emit('end');
+}
 
 gulp.task('default', ['scripts', 'minify-html', 'minify-css', 'watch'])

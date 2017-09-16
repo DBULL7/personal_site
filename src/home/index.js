@@ -66,3 +66,15 @@ let gameLoop = () => {
 }
 
 requestAnimationFrame(gameLoop);
+
+window.addEventListener('scroll', function handler (ev) {
+
+  var someDiv = document.getElementById('new');
+  var distanceToTop = someDiv.getBoundingClientRect().top;
+  if (distanceToTop <= 0) {
+    someDiv.style.bottom = 'auto'
+   someDiv.style.position = 'fixed'
+   someDiv.style.top = '0'
+   window.removeEventListener('scroll', handler)
+  } 
+});

@@ -102,6 +102,11 @@ h1 {
 	border: 1px solid #5012E6;
 }
 
+.sm-icon:hover {
+	background-color: #5012E6;
+	color: #fff;
+}
+
 #down-icon {
 	text-decoration: none;
 	color: #fff;
@@ -116,11 +121,62 @@ h1 {
   display: block;
 }
 
+#welcome {
+	background: #001f3f;
+	color: #7fdbff;
+	padding: 40px;
+}
+
+#welcome-wrapper {
+	display: flex;
+	flex-direction: row-reverse;
+}
+
+#hi {
+	margin: 0;
+	color: #01ff70;
+	font-size: 36px;
+}
+
+#tag {
+	margin-bottom: 40px;
+	font-size: 19px;
+}
+
 #social {
 	display: flex;
 	justify-content: center;
 	margin-top: 50px;
 	margin-bottom: 50px;
+}
+
+#welcome-wrapper {
+	width: 100%;
+}
+
+#welcome-img-wrapper {
+	width: 40%;
+	text-align: center;
+}
+
+#welcome-img {
+	border-radius: 50%;
+	max-width: 250px;
+}
+
+#welcome-text-wrapper {
+  width: 60%;
+}
+
+.about {
+	color: #fff;
+	margin: 0;
+	line-height: 1.5;
+  font-size: 1.15em;
+}
+
+.lower-about {
+	padding-top: 20px;
 }
 
 

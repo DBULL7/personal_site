@@ -61,7 +61,7 @@ body {
 
 .input:focus ~ .focus-border {
 	width: 101%;
-	transition: 0.4s;
+	transition: 1s;
 }
 
 /* label {
