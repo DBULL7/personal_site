@@ -29,6 +29,7 @@ let compile = () => {
     folders.forEach(folder => {
       browserify({ entries: `./src/${folder}/index.js`, debug: false })
         .transform("babelify", { presets: ["es2015"] })
+        .on('error', onError)
         .bundle()
         .pipe(source('index.js'))
         .pipe(buffer())
@@ -41,6 +42,7 @@ let compile = () => {
       if (folder === 'index.html' || 'main.css' || 'index.js') return
         browserify({ entries: `./src/games/${folder}/index.js`, debug: false })
           .transform("babelify", { presets: ["es2015"] })
+          .on('error', onError)
           .bundle()
           .pipe(source('index.js'))
           .pipe(buffer())
@@ -53,6 +55,7 @@ let compile = () => {
     folders.forEach(folder => {
       browserify({ entries: `./src/${folder}/index.js`, debug: true })
         .transform("babelify", { presets: ["es2015"] })
+        .on('error', onError)
         .bundle()
         .pipe(source('index.js'))
         .pipe(buffer())
@@ -64,6 +67,7 @@ let compile = () => {
       if (folder === 'index.html' || 'main.css' || 'index.js') return
       browserify({ entries: `./src/games/${folder}/index.js`, debug: false })
         .transform("babelify", { presets: ["es2015"] })
+        .on('error', onError)
         .bundle()
         .pipe(source('index.js'))
         .pipe(buffer())

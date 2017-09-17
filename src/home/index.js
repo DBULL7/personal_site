@@ -75,6 +75,8 @@ window.addEventListener('scroll', function handler (ev) {
     someDiv.style.bottom = 'auto'
    someDiv.style.position = 'fixed'
    someDiv.style.top = '0'
+   document.getElementById('down-icon').href = '#game'
+   document.getElementsByClassName('bg')[0].style.paddingTop = '30px'
    window.removeEventListener('scroll', handler)
   } 
 });
