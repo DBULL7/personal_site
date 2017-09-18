@@ -24,7 +24,11 @@
       <textarea id="terminal" resize></textarea>
     </div>
     <div id="content">
-      <img id='profile-pic' src='../assets/profile-pic.jpeg'>
+      <picture>
+        <source srcset="../assets/profile-pic.webp" type="image/webp">
+        <source srcset="../assets/profile-pic.jpeg" type="image/jpeg">
+        <img id='profile-pic' src="../assets/profile-pic.jpeg">
+      </picture>
       <h1>Devon Bull</h1>
       <h3>Software Developer</h3>
       <p id='short-desc'>Former Entrepreneur who was bitten by the coding bug. Now Software Developer who loves Javascript, TDD, and learning

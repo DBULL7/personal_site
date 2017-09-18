@@ -34,7 +34,11 @@
     <h4 class='welcome-top' id='tag'>I'm a data minded, performance oriented Software Engineer. I believe performance is a product and I strive to build apps that perform and deliver quality user experiences on all platforms.</h4>
     <div id='welcome-wrapper'>
       <div id='welcome-img-wrapper'>
-        <img id='welcome-img' src="../assets/profile-pic.jpeg">
+        <picture>
+          <source srcset="../assets/profile-pic.webp" type="image/webp">
+          <source srcset="../assets/profile-pic.jpeg" type="image/jpeg">
+          <img id='welcome-img' src="../assets/profile-pic.jpeg">
+        </picture>
       </div>
       <div id='welcome-text-wrapper'>
         <p class='about'>I'm a recent graduate from the Frontend program of the Turing School of Software and Design. During the 7 month program I learned how to build everything from Single Page Applications to Progressive Web Applications and native apps.</p> 
