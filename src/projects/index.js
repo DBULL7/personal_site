@@ -58,7 +58,7 @@ let popup = (project) => {
                   <picture>
                     <source srcset='${p.webp}' type='image/webp'>
                     <source srcset='${p.jpg}' type='image/jpeg'>
-                    <img id='large-img' src='${p.jpg}' alt="Movie Tracker Screenshot">
+                    <img id='large-img' src='${p.jpg}' alt="project screenshot">
                   </picture>
                   <p>${description}</p>
                   <ul class='tech-list'>
