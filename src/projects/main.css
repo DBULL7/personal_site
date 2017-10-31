@@ -61,7 +61,7 @@ h1 {
 .projects {
 	padding-top: 30px;
 	display: flex;
-	/* justify-content: center; */
+	justify-content: center;
 	flex-wrap: wrap;
 }
 

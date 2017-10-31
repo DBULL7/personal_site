@@ -70,6 +70,7 @@ textarea {
 }
 
 #content {
+	width: 70%;
 	text-align: center;
 }
 
@@ -132,6 +133,7 @@ h1 {
 		font-size: 22px;
 	}
 	#content {
+		width: 100%;
 		margin-top: 50px;
 		margin-bottom: 50px;
 	}
