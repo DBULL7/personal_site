@@ -237,4 +237,10 @@ h1 {
 		width: 100%;
 		text-align: center;
 	}
+	#icons {
+		display: flex;
+	}
+	.sm-icon {
+		padding: 10px 11px;
+	}
 }
