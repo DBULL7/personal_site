@@ -1,6 +1,6 @@
 let subheader = document.getElementById('example')
 
-let examples = ['React Native Apps', 'Command Line Applications', 'Landing Pages', 'APIs', 'React Apps','Javascript Applications']
+let examples = ['React Native Apps', 'React Apps', 'Vue Apps', 'Command Line Applications', 'Landing Pages', 'APIs']
 let description = 0;
 
 let deleteLine = (element, string) => {

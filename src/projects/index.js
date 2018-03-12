@@ -27,6 +27,15 @@ window.addEventListener('touchstart', function onFirstTouch() {
   document.getElementById('movie-tracker-container').addEventListener('click', () => {
     makeRequest('movie-tracker')
   })
+  document.getElementById('unavee-container').addEventListener('click', () => {
+    makeRequest('unavee')
+  })
+  document.getElementById('uhoops-container').addEventListener('click', () => {
+    makeRequest('uhoops')
+  })
+  document.getElementById('dab-container').addEventListener('click', () => {
+    makeRequest('dab')
+  })
   window.removeEventListener('touchstart', onFirstTouch, false);
 }, false);
 
@@ -77,6 +86,21 @@ let popup = (project) => {
     document.body.style.overflow = 'auto'
   })
 }
+
+let dab = document.getElementById('dab-btn')
+dab.addEventListener('click', () => {
+  makeRequest('Denver_Advisory_Board')
+})
+
+let uhoops = document.getElementById('uhoops-btn')
+uhoops.addEventListener('click', () => {
+  makeRequest('uhoops')
+})
+
+let unavee = document.getElementById('unavee-btn')
+unavee.addEventListener('click', () => {
+  makeRequest('unavee')
+})
 
 let movie = document.getElementById('movie-tracker-btn')
 movie.addEventListener('click', () => {
