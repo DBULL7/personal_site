@@ -36,6 +36,12 @@ window.addEventListener('touchstart', function onFirstTouch() {
   document.getElementById('dab-container').addEventListener('click', () => {
     makeRequest('dab')
   })
+  document.getElementById('unaveeV2-container').addEventListener('click', () => {
+    makeRequest('UnaveeV2')
+  })
+  document.getElementById('crx-container').addEventListener('click', () => {
+    makeRequest('CRX')
+  })
   window.removeEventListener('touchstart', onFirstTouch, false);
 }, false);
 
@@ -86,6 +92,17 @@ let popup = (project) => {
     document.body.style.overflow = 'auto'
   })
 }
+
+let crx = document.getElementById('crx-btn')
+crx.addEventListener('click', () => {
+  makeRequest('CRX')
+})
+
+
+let unaveeV2 = document.getElementById('unaveeV2-btn')
+unaveeV2.addEventListener('click', () => {
+  makeRequest('UnaveeV2')
+})
 
 let dab = document.getElementById('dab-btn')
 dab.addEventListener('click', () => {

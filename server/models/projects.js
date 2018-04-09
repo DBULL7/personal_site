@@ -14,6 +14,8 @@ module.exports = {
 }
 
 let allProjects = [
+  { name: 'CRX', description: 'Connect banks with underserved communities', technologies: ['Vue'], webp: '../assets/img/md/crx.webp', jpg: '../assets/jpg-md/crx.jpg', github: 'https://github.com/DBULL7/crxsolutions', site: 'https://crxsolutions.io' },
+  { name: 'UnaveeV2', description: 'Revamped Unavee, with additional features, built with Vue', technologies: ['Vue', 'Vue Router', 'Express', 'Passport', 'MongoDB', 'Mongoose', 'Vuex', 'Materialize'],webp: '../assets/img/md/unaveeV2.webp', jpg: '../assets/jpg/unaveeV2.jpg', github: 'https://github.com/DBULL7', site: 'https://unavee.com'},
   { name: 'Denver_Advisory_Board', description: 'Website for Denver Advisory Board', technologies: ['Javascript', 'React', 'Redux', 'Express', 'Passport.js', 'Mongoose', 'MongoDB'], webp: '../assets/img/md/dab.webp', jpg: '../assets/jpg/dab.jpg', github: 'https://github.com/DBULL7/Denver_Advisory_Board', site: 'https://denver-ab.herokuapp.com'},
   { name: 'uhoops', description: 'LinkedIn style social network for basketball players', technologies: ['Javascript', 'React', 'Redux', 'Express', 'MongoDB'], webp: '../assets/img/md/uhoops.webp', jpg: '../assets/jpg/uhoops.jpg', github: 'https://github.com/DBULL7/uhoops', site: 'https://uhoops.herokuapp.com'},
   { name: 'unavee', description: 'Search for people by email to get their social media profiles', technologies: ['Javascript', 'React', 'Redux', 'Postgres' ], webp: '../assets/img/md/unavee.webp', jpg: '../assets/jpg/unavee.jpg', github: 'https://github.com/DBULL7/unavee', site: 'https://unavee.herokuapp.com'},
