@@ -40,6 +40,7 @@ body {
 }
 
 .nav-link-a {
+	font-family: 'Avenir', Helvetica, Arial, sans-serif;
 	color: #fff;
 	text-decoration: none;
 }
@@ -95,11 +96,13 @@ h1 {
 
 .sm-icon {
 	text-decoration: none;
-	font-size: 18px;
+	font-size: 20px;
+	/* text-transform: uppercase; */
 	padding: 10px 20px;
-	background-color: #fff;
-	color: #5012E6;
-	border: 1px solid #5012E6;
+	background-color: #4776E6;
+	color: white;
+	/* color: #5012E6; */
+	/* border: 1px solid #5012E6; */
 }
 
 .sm-icon:hover {
@@ -122,6 +125,7 @@ h1 {
 }
 
 #welcome {
+	font-family: 'Avenir', Helvetica, Arial, sans-serif;
 	background: #001f3f;
 	color: #7fdbff;
 	padding: 40px;
@@ -139,15 +143,17 @@ h1 {
 }
 
 #tag {
-	margin-bottom: 40px;
-	font-size: 19px;
+	margin-bottom: 20px;
+	font-size: 22px;
+	line-height: 1.8;
 }
 
 #social {
 	display: flex;
 	justify-content: center;
-	margin-top: 50px;
-	margin-bottom: 50px;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	background: #001f3f;
 }
 
 #welcome-wrapper {
@@ -169,14 +175,15 @@ h1 {
 }
 
 .about {
+	font-family: 'Avenir', Helvetica, Arial, sans-serif;
 	color: #fff;
 	margin: 0;
-	line-height: 1.5;
-  font-size: 1.15em;
+	line-height: 1.8;
+	font-size: 20px;
 }
 
 .lower-about {
-	padding-top: 20px;
+	padding-top: 30px;
 }
 
 
