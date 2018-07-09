@@ -1,1 +1,1 @@
-console.log('suh dude')
+import './main.css'

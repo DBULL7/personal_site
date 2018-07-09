@@ -1,3 +1,5 @@
+import './main.css'
+
 window.addEventListener('touchstart', function onFirstTouch() {
   var paras = document.getElementsByClassName('hover-layer');
   while (paras.length) {

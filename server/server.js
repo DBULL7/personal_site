@@ -15,15 +15,13 @@ app.use(helmet())
 const routes = require('./routes')
 const pages = require('./pages')
 
-// let age = 86400000
-// if (process.env.NODE_ENV === 'production') {
-//   app.use(express.static('public', {maxAge: age} ))
-// } else {
-//   app.use(express.static('public'))
-// }
+
 app.use('/api/v1', routes)
 app.use('/', pages)
 app.use(express.static('public'))
+app.use(express.static('dist'))
+
+
 app.get('/resume', (req, res) => {
   res.download('./DevonBullResume.pdf', 'DevonBullResume.pdf');
 })

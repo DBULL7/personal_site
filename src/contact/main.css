@@ -16,7 +16,7 @@ body {
 #form {
 	height: 100vh;
 	/* background: linear-gradient(rgba(0,0,0,0.60),rgba(0, 0, 0, 0.60)),url(../assets/contact.webp); */
-	background: linear-gradient(rgba(0,0,0,0.60),rgba(0, 0, 0, 0.60)),url(../assets/contact.jpg);
+	background: linear-gradient(rgba(0,0,0,0.60),rgba(0, 0, 0, 0.60)), url(/assets/contact.jpg);
 	/* background-position: center center; */
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
