@@ -1,3 +1,5 @@
+import './main.css'
+
 let terminal = document.getElementById('terminal')
 
 let type = (string, element) => {

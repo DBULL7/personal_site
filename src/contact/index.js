@@ -1,3 +1,5 @@
+import './main.css'
+
 let sendButton = document.getElementById('send')
 
 sendButton.addEventListener('click', () => {

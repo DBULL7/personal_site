@@ -1,3 +1,5 @@
+import './main.css'
+
 const Board = require('./Board.js')
 const canvas = document.getElementById('canvas')
 const ctx = canvas.getContext('2d')

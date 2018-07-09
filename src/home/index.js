@@ -1,3 +1,5 @@
+import './main.css'
+
 let subheader = document.getElementById('example')
 
 let examples = ['React Native Apps', 'React Apps', 'Vue Apps', 'Command Line Applications', 'Landing Pages', 'APIs']
@@ -49,10 +51,10 @@ let generate = () => {
     let name = `star${i}`
     let rand = Math.floor(Math.random() * (canvas.width) + 1);
     let randColor = Math.floor(Math.random() * (starColors.length) + 0);
-    name = new Star(rand, i*5, 5, 5, starColors[randColor])
+    name = new Star(rand, i * 5, 5, 5, starColors[randColor])
     allStars.push(name)
   }
-  setTimeout(function() {
+  setTimeout(function () {
     generate()
   }, 5000);
 }
@@ -67,16 +69,16 @@ let gameLoop = () => {
 
 requestAnimationFrame(gameLoop);
 
-window.addEventListener('scroll', function handler (ev) {
+window.addEventListener('scroll', function handler(ev) {
 
   var someDiv = document.getElementById('new');
   var distanceToTop = someDiv.getBoundingClientRect().top;
   if (distanceToTop <= 0) {
     someDiv.style.bottom = 'auto'
-   someDiv.style.position = 'fixed'
-   someDiv.style.top = '0'
-   document.getElementById('down-icon').href = '#game'
-   document.getElementsByClassName('bg')[0].style.paddingTop = '30px'
-   window.removeEventListener('scroll', handler)
-  } 
+    someDiv.style.position = 'fixed'
+    someDiv.style.top = '0'
+    document.getElementById('down-icon').href = '#game'
+    document.getElementsByClassName('bg')[0].style.paddingTop = '30px'
+    window.removeEventListener('scroll', handler)
+  }
 });
