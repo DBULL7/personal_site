@@ -207,6 +207,9 @@ h1 {
 }
 
 @media (max-width: 450px) {
+	.home-link > img {
+		height: 20px;
+	}
 	.nav-bar {
 		font-size: 16px;
 		justify-content: space-around;
@@ -246,10 +249,16 @@ h1 {
 		width: 100%;
 		text-align: center;
 	}
+	#game {
+		height: 100px;
+	}
 	#icons {
 		display: flex;
+		flex-direction: column;
 	}
 	.sm-icon {
-		padding: 10px 11px;
+		padding: 10px 40px;
+		margin-bottom: 10px;
+		text-align: center;
 	}
 }
