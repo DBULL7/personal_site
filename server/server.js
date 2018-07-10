@@ -13,11 +13,9 @@ app.use(helmet())
 
 
 const routes = require('./routes')
-const pages = require('./pages')
 
 
-app.use('/api/v1', routes)
-app.use('/', pages)
+app.use('/', routes)
 app.use(express.static('public'))
 app.use(express.static('dist'))
 
